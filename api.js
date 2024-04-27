@@ -129,7 +129,6 @@ var server = app.listen(8080, () =>{
     var populateTableTemplate = 'INSERT INTO '+ dbName + '.' + tableName + "(name, description, price, image, active) VALUES ('";
     var jsonFile = require(__dirname+"\\files\\dbDefaults.json");
 
-    jsonFile.defaultRows.forEach((element) => console.log(element));
 
     console.log('Node server booting up\ndoing initial configs/checks');
     con.query(createDbQuery, (err, result)=>{
